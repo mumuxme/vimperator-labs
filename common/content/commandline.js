@@ -1719,6 +1719,7 @@ const ItemList = Class("ItemList", {
         }
 
         this._doc = iframe.contentDocument;
+        this._doc.allowUnsafeHTML = true;  // FIXME
         this._container = iframe.parentNode;
 
         this._doc.body.id = id + "-content";
